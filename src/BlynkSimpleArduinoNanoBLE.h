@@ -11,9 +11,6 @@
 #ifndef BlynkSimpleArduinoNano_BLE_h
 #define BlynkSimpleArduinoNano_BLE_h
 
-#define BLYNK_PRINT Serial
-#define BLYNK_DEBUG_ALL
-
 #ifndef BLYNK_INFO_CONNECTION
 #define BLYNK_INFO_CONNECTION "ArduinoNano_BLE"
 #endif
