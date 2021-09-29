@@ -111,6 +111,8 @@ public:
         return rxSize;
     }
 
+    BLEService getAdvertisedService();
+
 private:
 
     static BlynkTransportArduinoNano_BLE* instance;
@@ -167,6 +169,10 @@ public:
         conn.setDeviceName(name);
     }
 
+    BLEService getAdvertisedService() {
+        return conn.getAdvertisedService();
+    }
+
 };
 
 
@@ -186,6 +192,9 @@ inline
 inline
     void BlynkTransportArduinoNano_BLE::blePeripheralDisconnectHandler(BLEDevice central) {
     Blynk.disconnect();
+}
+BLEService BlynkTransportArduinoNano_BLE::getAdvertisedService() {
+   return pService;
 }
 
 #include <BlynkWidgets.h>
